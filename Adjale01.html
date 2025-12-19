@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adjale01 - Profile Pic</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #0d1117;
+        }
+
+        .profile-container {
+            width: 500px;
+            height: 500px;
+            background: linear-gradient(135deg, #0d0d0d 0%, #1a1a2e 50%, #16213e 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Cercle décoratif subtil */
+        .profile-container::before {
+            content: '';
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            border: 1px solid rgba(138, 43, 226, 0.15);
+            border-radius: 50%;
+        }
+
+        .profile-container::after {
+            content: '';
+            position: absolute;
+            width: 450px;
+            height: 450px;
+            border: 1px solid rgba(138, 43, 226, 0.08);
+            border-radius: 50%;
+        }
+
+        /* Pseudo principal */
+        .pseudo {
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 2.2rem;
+            font-weight: bold;
+            color: #fff;
+            letter-spacing: 2px;
+            text-shadow: 0 0 30px rgba(138, 43, 226, 0.4);
+            z-index: 10;
+        }
+
+        /* Ligne décorative */
+        .line {
+            width: 150px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #8a2be2, transparent);
+            margin: 20px 0;
+        }
+
+        /* Sous-titre */
+        .subtitle {
+            font-family: 'Consolas', monospace;
+            font-size: 0.75rem;
+            color: rgba(138, 43, 226, 0.8);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            z-index: 10;
+        }
+
+        /* Points décoratifs */
+        .dots {
+            display: flex;
+            gap: 8px;
+            margin-top: 25px;
+            z-index: 10;
+        }
+
+        .dot {
+            width: 6px;
+            height: 6px;
+            background: #8a2be2;
+            border-radius: 50%;
+            opacity: 0.6;
+        }
+
+        .dot:nth-child(2) {
+            opacity: 0.8;
+        }
+
+        .dot:nth-child(3) {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-container">
+        <div class="pseudo">Adjale01</div>
+        <div class="line"></div>
+        <div class="subtitle">Developer</div>
+        <div class="dots">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </div>
+</body>
+</html>
